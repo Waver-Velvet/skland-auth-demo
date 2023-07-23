@@ -14,3 +14,4 @@ const password = '<PASSWORD>'
 
 login(phone, password)
   .then(cred => { console.log(cred) })
+  .catch(error => { console.log(error) })
