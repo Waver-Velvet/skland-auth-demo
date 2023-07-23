@@ -1,37 +1,17 @@
 async function getTokenByPhonePassword (phone: string, password: string): Promise<{ token: string }> {
+  const url = 'https://as.hypergryph.com/user/auth/v1/token_by_phone_password'
   const payload = {
-    phone, password
+    phone,
+    password
   }
-  return await fetch(
-    'https://as.hypergryph.com/user/auth/v1/token_by_phone_password',
-    {
-      method: 'POST',
-      body: JSON.stringify(payload)
-    }
-  )
-    .then(async (resp) => {
-      if (resp.ok) {
-        return await resp.json()
-      } else {
-        throw new Error(`${resp.status}: ${resp.statusText}`)
-      }
-    })
-    .then(json => {
-      // const example = {
-      //     "status": 0,
-      //     "msg": "OK",
-      //     "data": {
-      //         "token": "<...>"
-      //     }
-      // }
-      if (json.status === 0) {
-        return { token: json.data.token }
-      } else {
-        // Remove sensitive data from error.
-        delete json.data
-        throw new Error(json)
-      }
-    })
+  const resp = await fetch(url, { method: 'POST', body: JSON.stringify(payload) })
+  const json = await resp.json()
+  if (resp.ok && json.status === 0) {
+    return { token: json.data.token }
+  } else {
+    delete json.data
+    throw new Error(`${resp.status} ${resp.statusText}: ${JSON.stringify(json)}`)
+  }
 }
 
 async function sendPhoneCode (phone: string): Promise<void> {
@@ -47,22 +27,17 @@ async function grantOAuthCode (token: string): Promise<{ code: string }> {
   const payload = {
     token,
 
-    // no idea about following fields
+    // Not sure about the following fields.
     appCode: '4ca99fa6b56cc2ba',
     type: 0
   }
   const resp = await fetch(url, { method: 'POST', body: JSON.stringify(payload) })
-  if (resp.ok) {
-    const json = await resp.json()
-    if (json.status === 0) {
-      return { code: json.data.code }
-    } else {
-      delete json.data
-      throw new Error(JSON.stringify(json))
-    }
+  const json = await resp.json()
+  if (resp.ok && json.status === 0) {
+    return { code: json.data.code }
   } else {
-    const text = await resp.text()
-    throw new Error(`${resp.status} ${resp.statusText}: ${text}`)
+    delete json.data
+    throw new Error(`${resp.status} ${resp.statusText}: ${JSON.stringify(json)}`)
   }
 }
 
