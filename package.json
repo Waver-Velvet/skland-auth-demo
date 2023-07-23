@@ -2,14 +2,22 @@
   "name": "skland-auth-demo",
   "packageManager": "yarn@3.5.1",
   "scripts": {
-    "run": "ts-node index.ts"
+    "run": "ts-node index.ts",
+    "lint": "eslint . --ignore-path .gitignore --ext .ts --fix"
   },
   "dependencies": {
     "unfetch": "^5.0.0"
   },
   "devDependencies": {
+    "@types/eslint": "^8",
     "@types/node": "^20.4.4",
+    "@typescript-eslint/eslint-plugin": "^5.52.0",
+    "eslint": "^8.0.1",
+    "eslint-config-standard-with-typescript": "latest",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
+    "eslint-plugin-promise": "^6.0.0",
     "ts-node": "^10.9.1",
-    "typescript": "^5.1.6"
+    "typescript": "*"
   }
 }
