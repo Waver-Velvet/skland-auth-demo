@@ -1,4 +1,7 @@
 {
   "name": "skland-auth-demo",
-  "packageManager": "yarn@3.5.1"
+  "packageManager": "yarn@3.5.1",
+  "dependencies": {
+    "unfetch": "^5.0.0"
+  }
 }
