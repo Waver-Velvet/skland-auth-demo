@@ -37,8 +37,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-n", "virtual:b9a1f4416f6cfb4c6253d7aadad74529595a444a10c144ee7d95d1a01cdb8eae0e1b5a41e87b61eaed268382266a409997af6d3b9e9e559ca7da59d88bbf5cd0#npm:16.0.1"],\
             ["eslint-plugin-promise", "virtual:b9a1f4416f6cfb4c6253d7aadad74529595a444a10c144ee7d95d1a01cdb8eae0e1b5a41e87b61eaed268382266a409997af6d3b9e9e559ca7da59d88bbf5cd0#npm:6.1.1"],\
             ["ts-node", "virtual:b9a1f4416f6cfb4c6253d7aadad74529595a444a10c144ee7d95d1a01cdb8eae0e1b5a41e87b61eaed268382266a409997af6d3b9e9e559ca7da59d88bbf5cd0#npm:10.9.1"],\
-            ["typescript", "patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=77c9e2"],\
-            ["unfetch", "npm:5.0.0"]\
+            ["typescript", "patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=77c9e2"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -2466,8 +2465,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-n", "virtual:b9a1f4416f6cfb4c6253d7aadad74529595a444a10c144ee7d95d1a01cdb8eae0e1b5a41e87b61eaed268382266a409997af6d3b9e9e559ca7da59d88bbf5cd0#npm:16.0.1"],\
             ["eslint-plugin-promise", "virtual:b9a1f4416f6cfb4c6253d7aadad74529595a444a10c144ee7d95d1a01cdb8eae0e1b5a41e87b61eaed268382266a409997af6d3b9e9e559ca7da59d88bbf5cd0#npm:6.1.1"],\
             ["ts-node", "virtual:b9a1f4416f6cfb4c6253d7aadad74529595a444a10c144ee7d95d1a01cdb8eae0e1b5a41e87b61eaed268382266a409997af6d3b9e9e559ca7da59d88bbf5cd0#npm:10.9.1"],\
-            ["typescript", "patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=77c9e2"],\
-            ["unfetch", "npm:5.0.0"]\
+            ["typescript", "patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=77c9e2"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -2775,15 +2773,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["has-bigints", "npm:1.0.2"],\
             ["has-symbols", "npm:1.0.3"],\
             ["which-boxed-primitive", "npm:1.0.2"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["unfetch", [\
-        ["npm:5.0.0", {\
-          "packageLocation": "./.yarn/cache/unfetch-npm-5.0.0-bb7408900a-005133bcdc.zip/node_modules/unfetch/",\
-          "packageDependencies": [\
-            ["unfetch", "npm:5.0.0"]\
           ],\
           "linkType": "HARD"\
         }]\
