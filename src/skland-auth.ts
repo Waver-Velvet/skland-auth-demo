@@ -13,7 +13,7 @@ async function generateCredByCode (code: string): Promise<{ cred: string }> {
   })
   const json = await resp.json()
   if (resp.ok && json.status === 0) {
-    return { cred: json.data.code }
+    return { cred: json.data.cred }
   } else {
     delete json.data
     throw new Error(`${resp.status} ${resp.statusText}: ${JSON.stringify(json)}`)
